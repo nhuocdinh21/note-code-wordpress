@@ -1,0 +1,22 @@
+/* add style price ajax search */
+.suggestion-post-title{
+    color: #1a1a1a;
+}
+.aa-dropdown-menu .aa-suggestion em {
+    background: transparent;
+}
+.suggestion-post-price {
+    font-size: 14px;
+}
+.suggestion-post-price > .amount,
+.suggestion-post-price > ins .amount {
+    color: red;
+    text-decoration: none
+}
+.suggestion-post-price > ins{
+    text-decoration: none
+}
+.suggestion-post-price del {
+    font-size: 12px;
+    color: grey
+}

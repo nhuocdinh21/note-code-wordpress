@@ -1,0 +1,68 @@
+#adminmenu li.menu-top.wp-has-submenu > span.toggle i
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 45px;
+}
+/* wrap_setting */
+.wrap_setting
+{
+
+}
+/* save_setting */
+.save_setting
+{
+	margin-top: 30px;
+}
+/* custom_wrap */
+.custom_wrap + .custom_wrap
+{
+	margin-top: 30px;
+}
+.custom_wrap table tr
+{
+	text-align: left;
+}
+.custom_wrap table tr td input
+{
+	width: 100%;
+	box-shadow: none;
+}
+.custom_wrap table
+{
+	width: 100%;
+}
+@media (min-width: 1280px)
+{
+	.custom_wrap table
+	{
+		width: 60%;
+	}
+}
+/* wrap_cauhoi */
+.wrap_cauhoi table tr td input
+{
+	width: auto;
+}
+.wrap_cauhoi table
+{
+	/*width: auto;*/
+}
+.wrap_cauhoi table tr th
+{
+	padding-right: 15px;
+}
+/* wrap_traloi */
+.wrap_traloi table tr td input
+{
+	width: auto;
+}
+.wrap_traloi table
+{
+	/*width: auto;*/
+}
+.wrap_traloi table tr th
+{
+	padding-right: 15px;
+}

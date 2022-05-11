@@ -1,0 +1,8 @@
+.tabs .tab-content .tab-ct {
+	 visibility: hidden;
+	 height: 0;
+}
+ .tabs .tab-content .tab-ct.active {
+	 visibility: visible;
+	 height: auto;
+}

@@ -1,0 +1,21 @@
+* Giao diện Frontend
+- Form đăng nhập
+- Form đăng tin dự án
+- Quản lý thông tin tài khoản (chỉnh sửa số điện thoại)
+- Quản lý tin đăng:
+  + Phân trang khi số lượng > 10
+  + Chỉnh sửa bài đăng
+- Form tìm kiếm dự án:
+  + Vị trí: Tỉnh/Thành phố, Quận/Huyện, Phường/Xã, Đường phố
+  + Tìm theo Loại hình (Chuyên mục dự án)
+  + Tìm theo giá dự án: Cao nhất, Thấp nhất, Thỏa thuận
+
+* Giao diện Backend
+- Quản lý Thành viên: 
+  + Tùy chỉnh giao diện hiển thị danh sách thành viên
+  + Chức năng kích hoạt, khóa tài khoản
+  + Bổ sung thêm trường Số điện thoại
+- Quản lý dự án
+  + Tùy chỉnh giao diện quản lý
+  + Tìm kiếm dự án theo mã tin đăng
+  + Chức năng fake lượt xem ảo và lượt xem thực

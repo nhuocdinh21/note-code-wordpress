@@ -1,0 +1,182 @@
+/* layout_single_artist */
+.layout_single_artist
+{
+	.artist_info
+	{
+		.artist_title
+		{
+			font-size: 26px;
+			font-weight: 500;
+			line-height: 1.3;
+			margin: 0 0 15px;
+			text-transform: uppercase;
+			.follow_button
+			{
+				display: inline-block;
+				font-size: 13px;
+				color: var(--light_brown);
+				font-weight: 400;
+				cursor: pointer;
+				position: relative;
+				top: -3px;
+				margin: 0 0 0 5px;
+				transition: all .3;
+				.inner
+				{
+					width: 100%;
+					-js-display: flex;
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-orient: horizontal;
+					-webkit-box-direction: normal;
+					-ms-flex-flow: row wrap;
+					flex-flow: row wrap;
+					.icon_follow
+					{
+					    margin: 0 4px 0 0;
+					}
+					.following_text
+					{
+						display: none;
+					}					
+				}
+				&:hover
+				{
+					color: var(--brown);
+				}					
+			}
+		}
+		.artist_description
+		{
+			line-height: 1.7;
+			margin: 0 0 10px;
+			p
+			{
+				&:last-child
+				{
+					margin: 0;
+				}
+			}
+		}
+		.showmore-button
+		{
+			cursor: pointer;
+			text-transform: uppercase;
+			color: var(--light_brown);
+			padding: 30px 0 0;
+			margin: -30px 0 0;
+			position: relative;
+			background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, #ffffff 80%, #ffffff 100%);
+			background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, #ffffff 80%, #ffffff 100%);
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, #ffffff 80%, #ffffff 100%);
+			text-align: center;
+			font-size: 14px;
+			&:after
+			{
+				content: "\f0dd";
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				font-size: 16px;
+				line-height: 1;
+				display: inline-block;
+				margin: 0 0 0 5px;
+				position: relative;
+				top: -2px;
+				vertical-align: baseline;
+			}
+			&.showless
+			{
+				background: transparent;
+				margin: 0;
+				padding: 0;
+				&:after
+				{
+					content: "\f0de";
+					top: 4px;
+				}
+			}
+		}
+	}
+	.artist_imgtool
+	{
+		.artist_img
+		{
+			.box
+			{
+				.box-image
+				{
+					.follow_button
+					{
+						position: absolute;
+						left: 0;
+						bottom: 5px;
+						width: 100%;
+						background-color: rgba(0, 0, 0, 0.5);
+						color: var(--white);
+						text-align: center;
+						font-size: 14px;
+						padding: 10px 0;
+					    cursor: pointer;
+						.inner
+						{
+							width: 100%;
+						    -js-display: flex;
+						    display: -webkit-box;
+						    display: -ms-flexbox;
+						    display: flex;
+						    -webkit-box-orient: horizontal;
+						    -webkit-box-direction: normal;
+						    -ms-flex-flow: row wrap;
+						    flex-flow: row wrap;
+						    align-items: center;
+						    justify-content: center;
+							.icon_follow
+							{
+							    margin: 0 5px 0 0;
+							}
+							.following_text
+							{
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+		.artist_name
+		{
+			padding: 15px 0;
+			text-align: center;
+			line-height: 1.4;
+			color: var(--light_blue);
+			font-size: 14px;
+			.title
+			{
+				font-size: 18px;
+				font-weight: 500;
+				color: var(--brown);
+			}
+		}
+		.artist_follow
+		{
+			background-color: #f4f4f4;
+		    text-align: center;
+		    padding: 12px 0;
+		    line-height: 1.3;
+		    font-size: 14px;
+		    font-weight: 500;
+		}
+	}
+	.artist_products
+	{
+		.title_artist_products
+		{
+			text-transform: uppercase;
+			line-height: 1.3;
+			font-size: 24px;
+			font-weight: 500;
+			margin: 0 0 20px;
+		}
+	}
+}

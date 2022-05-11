@@ -1,0 +1,39 @@
+/* filter_posttype */
+.filter_posttype
+{
+	margin: 20px 0 0;
+	> ul
+	{
+		background-color: #f7f7f7;
+		list-style: none;
+		padding: 0 7px;
+		margin: 0 0 20px;
+		li
+		{
+			display: inline-block;
+			margin: 0 !important;
+			text-transform: uppercase;
+			padding: 7px;
+			transition: all .3s;
+			cursor: pointer;
+			&:first-child
+			{
+				text-transform: capitalize;
+			}
+			&.current, &:hover
+			{
+				color: var(--primary_color);
+			}
+		}
+	}
+	#filter-results
+	{
+		.filter_key
+		{
+			margin: 0 0 15px;
+			font-size: 32px;
+			font-weight: 400;
+			text-transform: capitalize;
+		}
+	}
+}
