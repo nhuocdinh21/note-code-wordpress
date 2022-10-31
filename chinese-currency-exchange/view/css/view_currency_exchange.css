@@ -1,0 +1,549 @@
+:root {
+	--black: #140341;
+}
+/* start form_currency_exchange_wrapper */ 
+.form_currency_exchange_wrapper {
+	font-family: 'Roboto';
+}
+.form_currency_exchange_wrapper .inner {
+	padding: 30px;
+	background-color: #fff;
+	box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.1);
+	border-radius: 32px;
+}
+@media (max-width: 549px) {
+	.form_currency_exchange_wrapper .inner {
+		padding: 15px 10px;
+		border-radius: 15px;
+	}
+}
+.form_currency_exchange_wrapper .title_form_exchange .title {
+	margin: 0 0 12px;
+    color: var(--black);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+}
+@media (max-width: 549px) {
+	.form_currency_exchange_wrapper .title_form_exchange .title {
+		font-size: 22px;
+		margin: 0 0 10px;
+	}
+}
+.form_currency_exchange_wrapper .current_datetime {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 400;
+    color: var(--black);
+    font-size: 18px;
+    line-height: 1.3;
+    margin: 0 0 20px;
+    font-family: 'Roboto';
+}
+@media (max-width: 549px) {
+	.form_currency_exchange_wrapper .current_datetime {
+		font-size: 14px;
+		margin: 0 0 15px;
+	}
+}
+.form_currency_exchange_wrapper .current_datetime > div + div {
+	margin: 0 0 0 15px;
+}
+@media (max-width: 549px) {
+	.form_currency_exchange_wrapper .current_datetime > div + div {
+		margin: 0 0 0 10px;
+	}
+}
+.form_currency_exchange_wrapper .data_currency_exchange {
+    font-family: 'Roboto';
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0 0 20px;
+    padding: 0 0 10px;
+}
+.form_currency_exchange_wrapper .data_currency_exchange .currency_row {
+    width: calc( 100% + 20px);
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+@media (max-width: 549px) {
+	.form_currency_exchange_wrapper .data_currency_exchange .currency_row {
+		width: calc( 100% + 5px);
+		margin-left: -2.5px;
+   		margin-right: -2.5px;
+	}
+}
+.form_currency_exchange_wrapper .data_currency_exchange .currency_row .item {
+	padding: 0 10px 15px;
+    max-width: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+}
+@media (max-width: 549px) {
+	.form_currency_exchange_wrapper .data_currency_exchange .currency_row .item {
+		padding: 0 2.5px 5px;
+	}
+}
+.form_currency_exchange_wrapper .data_currency_exchange .currency_row .item.null, 
+.form_currency_exchange_wrapper .data_currency_exchange .currency_row .item.title {
+	max-width: 18%;
+    -ms-flex-preferred-size: 18%;
+    flex-basis: 18%;
+}
+.form_currency_exchange_wrapper .data_currency_exchange .currency_row.currency_title .item:not(.null),
+.form_currency_exchange_wrapper .data_currency_exchange .currency_row .item.value {
+	max-width: calc( 82% / 3 );
+    -ms-flex-preferred-size: calc( 82% / 3 );
+    flex-basis: calc( 82% / 3 );
+}
+.form_currency_exchange_wrapper .data_currency_exchange .currency_row.currency_title .item {
+	padding: 0 10px 20px;
+}
+@media (max-width: 549px) {
+	.form_currency_exchange_wrapper .data_currency_exchange .currency_row.currency_title .item {
+		padding: 0 2.5px 5px;
+	}
+}
+.form_currency_exchange_wrapper .data_currency_exchange .currency_row.currency_title .item span {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    color: var(--black);
+    min-height: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+@media (max-width: 549px) {
+	.form_currency_exchange_wrapper .data_currency_exchange .currency_row.currency_title .item span {
+		font-size: 12px;
+	}
+}
+.form_currency_exchange_wrapper .data_currency_exchange .currency_row .item.title {
+    font-size: 14px;
+    line-height: 24px;
+    color: #828282;
+    text-align: center;
+    text-transform: uppercase;
+}
+@media (max-width: 549px) {
+	.form_currency_exchange_wrapper .data_currency_exchange .currency_row .item.title {
+		font-size: 12px;
+		text-transform: unset;
+	}
+}
+.form_currency_exchange_wrapper .data_currency_exchange .currency_row .item.value {
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+}
+@media (max-width: 549px) {
+	.form_currency_exchange_wrapper .data_currency_exchange .currency_row .item.value {
+		font-size: 14px;
+	}
+}
+.form_currency_exchange_wrapper .form_type_wrap {
+	margin: 0 0 20px;
+}
+.form_currency_exchange_wrapper .form_type_wrap .type_title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--black);
+    font-weight: 700;
+    margin: 0 0 15px;
+}
+.form_currency_exchange_wrapper .form_type_wrap .list_form_type {
+	text-align: center;
+}
+.form_currency_exchange_wrapper .form_type_wrap .list_form_type .list_inner {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 2px;
+}
+.form_currency_exchange_wrapper .form_type_wrap .list_form_type .list_inner .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+}
+.form_currency_exchange_wrapper .form_type_wrap .list_form_type .list_inner .item {
+	display: inline-block;
+}
+.form_currency_exchange_wrapper .form_type_wrap .list_form_type .list_inner .item input {
+	display: none;
+}
+.form_currency_exchange_wrapper .form_type_wrap .list_form_type .list_inner .item label {
+	min-height: 36px;
+	height: 36px;
+	line-height: 36px;
+	color: #333;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 0 40px;
+	cursor: pointer;
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .form_type_wrap .list_form_type .list_inner .item label {
+        font-size: 14px;
+        min-height: 32px;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 30px;
+    }
+}
+.form_currency_exchange_wrapper .form_type_wrap .list_form_type .list_inner .item input:checked + label {
+	background-color: var(--form_primary_color);
+	color: #fff;
+	border-radius: 6px;
+	font-weight: 700;
+}
+.form_currency_exchange_wrapper .list_currency_exchange {
+	margin: 0 0 20px;
+}
+.form_currency_exchange_wrapper .list_currency_exchange .list_inner {
+	text-align: center;
+}
+.form_currency_exchange_wrapper .list_currency_exchange .list_inner .item {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--black);	
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .list_currency_exchange .list_inner .item {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+.form_currency_exchange_wrapper .list_currency_exchange .list_inner .item + .item {
+	margin: 0 0 0 30px;
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .list_currency_exchange .list_inner .item + .item {
+        margin: 0 0 0 10px;
+    }
+}
+.form_currency_exchange_wrapper .list_currency_exchange .list_inner .item input {
+    width: 24px;
+    height: 24px;
+    min-height: 24px;
+    line-height: 24px;
+    margin: 0 5px 0 0;
+    vertical-align: bottom;
+    cursor: pointer;
+    accent-color: var(--form_primary_color);
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .list_currency_exchange .list_inner .item input {
+        width: 18px;
+        height: 18px;
+        min-height: 18px;
+        line-height: 18px;
+        margin: 0 3px 0 0;
+    }
+}
+.form_currency_exchange_wrapper .list_currency_exchange .list_inner .item label {
+	cursor: pointer;
+}
+.form_currency_exchange_wrapper .list_currency_exchange .list_inner .item label:hover {
+	color: var(--form_primary_color);
+}
+.form_currency_exchange_wrapper .payment_service_fee_wrap {
+	margin: 0 0 20px;
+	display: none;
+}
+.form_currency_exchange_wrapper .payment_service_fee_wrap .option_fee {
+	text-align: center;
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--black);
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .payment_service_fee_wrap .option_fee {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+.form_currency_exchange_wrapper .payment_service_fee_wrap .option_fee input {
+	width: 18px;
+    height: 18px;
+    min-height: 18px;
+    line-height: 18px;
+    margin: 0 5px 0 0;
+    vertical-align: text-top;
+    cursor: pointer;
+    accent-color: var(--form_primary_color);
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .payment_service_fee_wrap .option_fee input {
+        width: 16px;
+        height: 16px;
+        min-height: 16px;
+        line-height: 16px;
+        margin: 0 3px 0 0;
+    }
+}
+.form_currency_exchange_wrapper .payment_service_fee_wrap .option_fee label {
+	cursor: pointer;
+}
+.form_currency_exchange_wrapper .exchange_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0 0 20px;
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .exchange_item {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+}
+.form_currency_exchange_wrapper .header__right__cal .exchange_item.cny_change {
+	display: none;
+}
+.form_currency_exchange_wrapper .header__right__cal.cny_active .exchange_item.vnd_change {
+	display: none;
+}
+.form_currency_exchange_wrapper .header__right__cal.cny_active .exchange_item.cny_change {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.form_currency_exchange_wrapper .exchange_item .form-group {
+	width: 42%;	
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .exchange_item .form-group {
+        width: 40%;
+    }
+}
+.form_currency_exchange_wrapper .exchange_item .form-group label {	
+    font-size: 15px;
+    color: var(--black);
+    line-height: 1.3;
+    margin: 0 0 5px;
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .exchange_item .form-group label {
+        font-size: 14px;
+    }
+}
+.form_currency_exchange_wrapper .exchange_item .form-group input {
+    border-radius: 4px;
+    min-height: 45px;
+    height: 45px;
+    line-height: 43px;
+    border: 1px solid #ced4da;
+    color: #495057;
+    padding: 0 12px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: none;
+    font-size: 15px;
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .exchange_item .form-group input {
+        min-height: 42px;
+        height: 42px;
+        line-height: 40px;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+}
+.form_currency_exchange_wrapper .exchange_item .button__change {
+	text-align: center;
+    font-size: 14px;
+}
+.form_currency_exchange_wrapper .exchange_item .button__change p {
+	margin: 0;
+    font-size: 14px;
+    color: var(--black);
+    line-height: 1.5;
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .exchange_item .button__change p {
+        display: none;
+    }
+}
+.form_currency_exchange_wrapper .exchange_item .button__change a {
+    border-radius: 3px;
+    display: inline-block;
+    padding: 0;
+    min-height: 40px;
+    height: 40px;
+    line-height: 40px;
+    min-width: 45px;
+}
+.form_currency_exchange_wrapper .exchange_item .button__change a img {
+	height: 15px;
+    vertical-align: middle;
+    object-fit: unset;
+}
+.form_currency_exchange_wrapper .change__detail-info {
+    display: none;
+    text-align: right;
+    margin: 0 0 20px;
+    color: var(--black);
+}
+.form_currency_exchange_wrapper .change__detail-info ul {
+    margin: 0;
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+.form_currency_exchange_wrapper .change__detail-info ul li {
+	border: 1px solid #ebebeb;
+    margin-top: -1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    font-size: 15px;
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .change__detail-info ul li {
+        font-size: 14px;
+    }
+}
+.form_currency_exchange_wrapper .change__detail-info ul li > span{
+    display: inline-block;
+    padding: 8px 10px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 250px;
+    flex: 0 0 250px;
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .change__detail-info ul li > span {
+        flex: unset;
+    }
+}
+.form_currency_exchange_wrapper .change__detail-info ul li > p{
+	font-weight: bold;
+    border-left: 1px solid #ebebeb;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 180px;
+    flex: 0 0 180px;
+    padding: 8px 10px;
+    margin: 0;
+    font-size: 15px
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .change__detail-info ul li > p {
+        -ms-flex: 0 0 150px;
+        flex: 0 0 150px;
+        font-size: 14px;
+    }
+}
+.form_currency_exchange_wrapper .change__detail-info ul li > p#money_exchange {
+	color: var(--form_primary_color);
+}
+.form_currency_exchange_wrapper .change__detail-info ul li > p#number_receive {
+    color: var(--form_primary_color);
+    font-size: 18px;
+}
+@media (max-width: 549px) {
+    .form_currency_exchange_wrapper .change__detail-info ul li > p#number_receive {
+        font-size: 16px;
+    }
+}
+.form_currency_exchange_wrapper .form_exchange_description {
+	border-radius: 8px;
+	font-size: 15px;
+	line-height: 1.6;
+	color: #333;
+	padding: 15px;
+}
+.form_currency_exchange_wrapper .form_exchange_description p {
+	margin: 0 0 5px;
+	line-height: 1.6;
+	font-size: 15px;
+}
+.form_currency_exchange_wrapper .form_exchange_description p:last-child {
+	margin: 0;
+}
+/* end form_currency_exchange_wrapper */
+
+/* start chart_currency_exchange_wrap */
+.chart_currency_exchange_wrap .title_box_chat .title {
+	text-align: center;
+	font-size: 30px;
+	line-height: 1.3;
+	margin: 0 0 30px;
+	color: var(--black);
+}
+.chart_currency_exchange_wrap .tabs .tab-content .tab-pane {
+	display: none;
+}
+.chart_currency_exchange_wrap .tabs .tab-content .tab-pane.active {
+	display: block;
+}
+.chart_currency_exchange_wrap .chart_container {
+	position: relative;
+}
+.chart_currency_exchange_wrap .tabs .tab-links {
+	-ms-flex-pack: end;
+    justify-content: flex-end;
+}
+.chart_currency_exchange_wrap .tabs .tab-links li {
+	margin: 0 5px;
+}
+.chart_currency_exchange_wrap .tabs .tab-links li:first-child {
+	margin-left: 0;
+}
+.chart_currency_exchange_wrap .tabs .tab-links li:last-child {
+	margin-right: 0;
+}
+.chart_currency_exchange_wrap .tabs .tab-links li a {
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid var(--chart_primary_color);
+    min-height: 30px;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 10px;
+    display: inline-block;
+    color: var(--chart_primary_color);
+    cursor: pointer;
+}
+.chart_currency_exchange_wrap .tabs .tab-links li.active a {
+	background-color: var(--chart_primary_color);
+	color: #fff;
+}
+/* end chart_currency_exchange_wrap */

@@ -1,0 +1,33 @@
+/* start cmb2-wrap */ 
+.cmb2-wrap .cmb-type-wysiwyg .cmb-td {
+    width: 97%;
+}
+@media (min-width: 768px) {
+    .cmb2-wrap .cmb-type-wysiwyg .cmb-td {
+        width: calc( 100% - 230px );
+    }
+}
+
+.cmb2-wrap .cmb-type-select .cmb-td select {
+    width: 97%;
+}
+@media (min-width: 768px) {
+    .cmb2-wrap .cmb-type-select .cmb-td select {
+        width: 350px;
+    }
+}
+
+.cmb2-wrap .cmb-type-multicheck .cmb-td {
+    width: 97%;
+}
+@media (min-width: 768px) {
+    .cmb2-wrap .cmb-type-multicheck .cmb-td {
+        width: 350px;
+    }
+}
+.cmb2-wrap .cmb-type-multicheck .cmb2-checkbox-list {
+    height: 90px;
+    overflow-y: auto;
+    overflow-x: unset;
+}
+/* end cmb2-wrap */
