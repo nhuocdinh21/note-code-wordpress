@@ -189,10 +189,21 @@ function phongmy_cmb2_sample_metaboxes() {
 
 	// add Primary Color
 	$chart->add_field( array(
-	    'name'    => __('Màu chủ đạo của website'),
+	    'name'    => __('Màu chủ đạo 1'),
 	    'id'      => $chart_prefix . 'primary_color',
 	    'type'    => 'colorpicker',
 	    'default' => '#6440fb',
+	    'options' => array(
+	        'alpha' => true, // Make this a rgba color picker.
+	    ),
+	) );
+
+	// add Secondary Color
+	$chart->add_field( array(
+	    'name'    => __('Màu chủ đạo 2'),
+	    'id'      => $chart_prefix . 'secondary_color',
+	    'type'    => 'colorpicker',
+	    'default' => '#eb5757',
 	    'options' => array(
 	        'alpha' => true, // Make this a rgba color picker.
 	    ),

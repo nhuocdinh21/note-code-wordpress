@@ -40,6 +40,7 @@ if  ( ! function_exists( 'shortcode_chart_currency_exchange' ) ){
 				<style type="text/css">
 					:root {
 						--chart_primary_color: <?php echo get_option_chart('chart_currency_exchange_primary_color') ? get_option_chart('chart_currency_exchange_primary_color') : '#6440fb'; ?>;
+						--chart_secondary_color: <?php echo get_option_chart('chart_currency_exchange_secondary_color') ? get_option_chart('chart_currency_exchange_secondary_color') : '#eb5757'; ?>;
 					}
 				</style>
 				<script type="text/javascript">
@@ -137,6 +138,9 @@ if  ( ! function_exists( 'shortcode_chart_currency_exchange' ) ){
 						    label: '<?php echo get_option_form('frm_exchange_title_currency_1') ? get_option_form('frm_exchange_title_currency_1') : __('Alipay Trung','phongmy'); ?>',
 						    data: [<?php echo $str_dataChineseDataSell; ?>], // Giá trị của từng Line tương ứng với giá trị thơi gian AM, PM bên dưới
 						    lineTension: 0.3, // độ mềm của line
+						    pointRadius: 6,
+						    pointHoverRadius: 8,
+						    pointBackgroundColor: '<?php echo get_option_chart('chart_currency_exchange_alipay_chinese_border_color') ? get_option_chart('chart_currency_exchange_alipay_chinese_border_color') : 'purple'; ?>',
 						    fill: false,
 						    borderColor: '<?php echo get_option_chart('chart_currency_exchange_alipay_chinese_border_color') ? get_option_chart('chart_currency_exchange_alipay_chinese_border_color') : 'purple'; ?>',
 					  	};
@@ -145,6 +149,9 @@ if  ( ! function_exists( 'shortcode_chart_currency_exchange' ) ){
 						    label: '<?php echo get_option_form('frm_exchange_title_currency_2') ? get_option_form('frm_exchange_title_currency_2') : __('Alipay Việt','phongmy'); ?>',
 						    data: [<?php echo $str_dataVietnameseDataSell; ?>],
 						    lineTension: 0.3,
+						    pointRadius: 6,
+						    pointHoverRadius: 8,
+						    pointBackgroundColor: '<?php echo get_option_chart('chart_currency_exchange_alipay_vietnamese_border_color') ? get_option_chart('chart_currency_exchange_alipay_vietnamese_border_color') : 'blue'; ?>',
 						    fill: false,
 						    borderColor: '<?php echo get_option_chart('chart_currency_exchange_alipay_vietnamese_border_color') ? get_option_chart('chart_currency_exchange_alipay_vietnamese_border_color') : 'blue'; ?>',
 					  	};
@@ -153,6 +160,9 @@ if  ( ! function_exists( 'shortcode_chart_currency_exchange' ) ){
 						    label: '<?php echo get_option_form('frm_exchange_title_currency_3') ? get_option_form('frm_exchange_title_currency_3') : __('Tệ thẻ','phongmy'); ?>',
 						    data: [<?php echo $str_dataCardDataSell; ?>],
 						    lineTension: 0.3,
+						    pointRadius: 6,
+						    pointHoverRadius: 8,
+						    pointBackgroundColor: '<?php echo get_option_chart('chart_currency_exchange_alipay_card_border_color') ? get_option_chart('chart_currency_exchange_alipay_card_border_color') : 'green'; ?>',
 						    fill: false,
 						  	borderColor: '<?php echo get_option_chart('chart_currency_exchange_alipay_card_border_color') ? get_option_chart('chart_currency_exchange_alipay_card_border_color') : 'green'; ?>',
 					  	};
@@ -244,6 +254,9 @@ if  ( ! function_exists( 'shortcode_chart_currency_exchange' ) ){
 						    label: '<?php echo get_option_form('frm_exchange_title_currency_1') ? get_option_form('frm_exchange_title_currency_1') : __('Alipay Trung','phongmy'); ?>',
 						    data: [<?php echo $str_dataChineseDataBuy; ?>], // Giá trị của từng Line tương ứng với giá trị thơi gian AM, PM bên dưới
 						    lineTension: 0.3, // độ mềm của line
+						    pointRadius: 6,
+						    pointHoverRadius: 8,
+						    pointBackgroundColor: '<?php echo get_option_chart('chart_currency_exchange_alipay_chinese_border_color') ? get_option_chart('chart_currency_exchange_alipay_chinese_border_color') : 'purple'; ?>',
 						    fill: false,
 						    borderColor: '<?php echo get_option_chart('chart_currency_exchange_alipay_chinese_border_color') ? get_option_chart('chart_currency_exchange_alipay_chinese_border_color') : 'purple'; ?>',
 					  	};
@@ -252,6 +265,9 @@ if  ( ! function_exists( 'shortcode_chart_currency_exchange' ) ){
 						    label: '<?php echo get_option_form('frm_exchange_title_currency_2') ? get_option_form('frm_exchange_title_currency_2') : __('Alipay Việt','phongmy'); ?>',
 						    data: [<?php echo $str_dataVietnameseDataBuy; ?>],
 						    lineTension: 0.3,
+						    pointRadius: 6,
+						    pointHoverRadius: 8,
+						    pointBackgroundColor: '<?php echo get_option_chart('chart_currency_exchange_alipay_vietnamese_border_color') ? get_option_chart('chart_currency_exchange_alipay_vietnamese_border_color') : 'blue'; ?>',
 						    fill: false,
 						    borderColor: '<?php echo get_option_chart('chart_currency_exchange_alipay_vietnamese_border_color') ? get_option_chart('chart_currency_exchange_alipay_vietnamese_border_color') : 'blue'; ?>',
 					  	};
@@ -260,6 +276,9 @@ if  ( ! function_exists( 'shortcode_chart_currency_exchange' ) ){
 						    label: '<?php echo get_option_form('frm_exchange_title_currency_3') ? get_option_form('frm_exchange_title_currency_3') : __('Tệ thẻ','phongmy'); ?>',
 						    data: [<?php echo $str_dataCardDataBuy; ?>],
 						    lineTension: 0.3,
+						    pointRadius: 6,
+						    pointHoverRadius: 8,
+						    pointBackgroundColor: '<?php echo get_option_chart('chart_currency_exchange_alipay_card_border_color') ? get_option_chart('chart_currency_exchange_alipay_card_border_color') : 'green'; ?>',
 						    fill: false,
 						  	borderColor: '<?php echo get_option_chart('chart_currency_exchange_alipay_card_border_color') ? get_option_chart('chart_currency_exchange_alipay_card_border_color') : 'green'; ?>',
 					  	};
@@ -398,7 +417,7 @@ if  ( ! function_exists( 'shortcode_form_currency_exchange' ) ){
 								</div>
 							</div>
 							<div class="currency_row currency_data">
-								<div class="item title"><span><?php echo __('Mua vào','phongmy'); ?></span></div>
+								<div class="item title" style="color: <?php echo get_option_form('frm_exchange_primary_color') ? get_option_form('frm_exchange_primary_color') : '#6440fb'; ?>;"><span><?php echo __('Mua vào','phongmy'); ?></span></div>
 								<div class="item value" style="color: <?php echo get_option_form('frm_exchange_primary_color') ? get_option_form('frm_exchange_primary_color') : '#6440fb'; ?>;">
 									<span id="vietnamese_buy"><?php echo number_format($vietnamese_buy_today); ?></span>
 								</div>
@@ -410,7 +429,7 @@ if  ( ! function_exists( 'shortcode_form_currency_exchange' ) ){
 								</div>
 							</div>
 							<div class="currency_row currency_data">
-								<div class="item title"><span><?php echo __('Bán ra','phongmy'); ?></span></div>
+								<div class="item title" style="color: <?php echo get_option_form('frm_exchange_secondary_color') ? get_option_form('frm_exchange_secondary_color') : '#EB5757'; ?>;"><span><?php echo __('Bán ra','phongmy'); ?></span></div>
 								<div class="item value" style="color: <?php echo get_option_form('frm_exchange_secondary_color') ? get_option_form('frm_exchange_secondary_color') : '#EB5757'; ?>;">
 									<span id="vietnamese_sell"><?php echo number_format($vietnamese_sell_today); ?></span>
 								</div>
@@ -472,7 +491,7 @@ if  ( ! function_exists( 'shortcode_form_currency_exchange' ) ){
 							<div class="exchange_item vnd_change">
 								<div class="form-group">
 									<label>Số tiền (¥)</label>
-									<input type="number" id="cny_input1" class="form-control" placeholder="¥">
+									<input type="text" id="cny_input1" class="form-control number-separator" placeholder="¥">
 								</div>
 								<div class="button__change">
 									<p>Đổi lại</p>
@@ -488,7 +507,7 @@ if  ( ! function_exists( 'shortcode_form_currency_exchange' ) ){
 							<div class="exchange_item cny_change">
 								<div class="form-group">
 									<label>Số tiền (VNĐ)</label>
-									<input type="number" id="vnd_input2" class="form-control" placeholder="VNĐ">
+									<input type="text" id="vnd_input2" class="form-control number-separator" placeholder="VNĐ">
 								</div>
 								<div class="button__change">
 									<p>Đổi lại</p>
@@ -505,7 +524,7 @@ if  ( ! function_exists( 'shortcode_form_currency_exchange' ) ){
 								<ul>
 									<li><span><?php echo __('Tỷ giá sử dụng','phongmy'); ?>:</span> <p id="money_exchange">0</p></li>
 									<li><span><?php echo __('Phí dịch vụ','phongmy'); ?>:</span> <p><?php echo get_option_form('frm_exchange_service_fee') ? number_format(get_option_form('frm_exchange_service_fee')) : 0; ?> <sup>đ</sup></p></li>
-									<li><span><?php echo __('Thanh toán hộ','phongmy'); ?>:</span> <p><b id="payment_change">0 <sup>đ</sup></b></p></li>
+									<li><span><?php echo __('Phí thanh toán hộ','phongmy'); ?>:</span> <p><b id="payment_change">0 <sup>đ</sup></b></p></li>
 									<li><span><?php echo __('Số tiền thanh toán','phongmy'); ?>:</span> <p id="number_receive">0 <sup>đ</sup></p></li>
 								</ul>
 							</div>

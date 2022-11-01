@@ -8,6 +8,9 @@ if  ( ! function_exists( 'add_script_to_frontend_page' ) ){
 		// add chart js
 		wp_enqueue_script( 'chart_js', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js', array('jquery'));
 
+		// add easy-number-separator
+		wp_enqueue_script( 'easy-number-separator', plugin_dir_url( __FILE__ ) . 'js/easy-number-separator.js', array('jquery'));
+
 		// add frontend currency exchange js
 		wp_enqueue_script( 'view_currency_exchange_js', plugin_dir_url( __FILE__ ) . 'js/view_currency_exchange.js', array('jquery'));
 	}

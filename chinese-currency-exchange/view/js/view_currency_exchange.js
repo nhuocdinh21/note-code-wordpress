@@ -59,6 +59,7 @@ jQuery(function($) {
 
     excute_form_exchange_rate = (method, currency, payment) => {    
         $('#cny_input1, #vnd_input1, #cny_input2, #vnd_input2').val('');
+        $('#payment_change').html('0 <sup>đ</sup>');
 
         let view_result = $('.change__detail-info');        
         view_result.hide();
@@ -79,7 +80,7 @@ jQuery(function($) {
                 let data_payment_fee = $('.form_currency_exchange_wrapper input[name="payment_service_fee"]').val() ? $('.form_currency_exchange_wrapper input[name="payment_service_fee"]').val() : 100;
 
                 $("#cny_input1").keydown(delay(function (e) {
-                    let cnyInput = parseInt(this.value);
+                    let cnyInput = parseFloat(this.value.replace(/,/g, ''));
                     if( !isNaN(cnyInput) && cnyInput > 0 ){
                         let payment_fee = data_payment_fee * cnyInput;
                         let vndInput = cnyInput * parseInt(data_rate) + parseInt(service_fee) + parseInt(payment_fee);
@@ -96,7 +97,7 @@ jQuery(function($) {
                 }, 200));
 
                 $("#vnd_input2").keydown(delay(function (e) {
-                    let vndInput = parseInt(this.value);
+                    let vndInput = parseFloat(this.value.replace(/,/g, ''));
                     if( !isNaN(vndInput) && vndInput > 0 ){
                         let cnyInput = ( vndInput - parseInt(service_fee) ) / ( parseInt(data_rate) + parseInt(data_payment_fee) );
                         $('#cny_input2').val(parseFloat(cnyInput).toFixed(2));
@@ -116,7 +117,7 @@ jQuery(function($) {
                 $('#money_exchange').html(formatNumber(data_rate));
 
                 $("#cny_input1").keydown(delay(function (e) {
-                    let cnyInput = parseInt(this.value);
+                    let cnyInput = parseFloat(this.value.replace(/,/g, ''));
                     if( !isNaN(cnyInput) && cnyInput > 0 ){
                         let vndInput = cnyInput * parseInt(data_rate) + parseInt(service_fee);
                         $('#vnd_input1').val(formatNumber(vndInput));
@@ -132,10 +133,11 @@ jQuery(function($) {
                 }, 200));
 
                 $("#vnd_input2").keydown(delay(function (e) {
-                    let vndInput = parseInt(this.value);
+                    let vndInput = parseFloat(this.value.replace(/,/g, ''));
                     if( !isNaN(vndInput) && vndInput > 0 ){
                         let cnyInput = ( vndInput - parseInt(service_fee) ) / parseInt(data_rate);
                         $('#cny_input2').val(parseFloat(cnyInput).toFixed(2));
+                        $('#payment_change').html('0 <sup>đ</sup>');
                         $('#number_receive').html(parseFloat(cnyInput).toFixed(2) + ' <sup>¥</sup>');
                         view_result.show();
                     }
@@ -155,7 +157,7 @@ jQuery(function($) {
             $('#money_exchange').html(formatNumber(data_rate));
 
             $("#cny_input1").keydown(delay(function (e) {
-                let cnyInput = parseInt(this.value);
+                let cnyInput = parseFloat(this.value.replace(/,/g, ''));
                 if( !isNaN(cnyInput) && cnyInput > 0 ){
                     let vndInput = cnyInput * parseInt(data_rate) - parseInt(service_fee);
                     $('#vnd_input1').val(formatNumber(vndInput));
@@ -170,7 +172,7 @@ jQuery(function($) {
             }, 200));
 
             $("#vnd_input2").keydown(delay(function (e) {
-                let vndInput = parseInt(this.value);
+                let vndInput = parseFloat(this.value.replace(/,/g, ''));
                 if( !isNaN(vndInput) && vndInput > 0 ){
                     let cnyInput = ( vndInput + parseInt(service_fee) ) / parseInt(data_rate);
                     $('#cny_input2').val(parseFloat(cnyInput).toFixed(2));
@@ -201,18 +203,22 @@ jQuery(function($) {
             let data_payment_fee = $('.form_currency_exchange_wrapper input[name="payment_service_fee"]').val() ? $('.form_currency_exchange_wrapper input[name="payment_service_fee"]').val() : 100;
 
             // excute when input has data
-            let cnyInputDefault = $("#cny_input1").val();
-            if( cnyInputDefault != '' ) {
+            let cnyInputDefault = parseFloat($("#cny_input1").val().replace(/,/g, ''));
+            console.log('cnyInputDefault', cnyInputDefault);
+            if( cnyInputDefault != '' && !isNaN(cnyInputDefault) ) {
                 view_result.show();
                 let payment_fee_default = data_payment_fee * cnyInputDefault;
+                console.log('payment_fee_default', payment_fee_default);
                 let vndInputCnyDefault = cnyInputDefault * parseInt(data_rate) + parseInt(service_fee) + parseInt(payment_fee_default);
+                console.log('vndInputCnyDefault', vndInputCnyDefault);
                 $('#vnd_input1').val(formatNumber(vndInputCnyDefault));
                 $('#payment_change').html(formatNumber(payment_fee_default) + ' <sup>đ</sup>');
                 $('#number_receive').html(formatNumber(vndInputCnyDefault) + ' <sup>đ</sup>');
             }
 
-            let vndInputDefault = $("#vnd_input2").val();
-            if( vndInputDefault != '' ) {
+            let vndInputDefault = parseFloat($("#vnd_input2").val().replace(/,/g, ''));
+            console.log('vndInputDefault', vndInputDefault);
+            if( vndInputDefault != '' && !isNaN(vndInputDefault) ) {
                 view_result.show();
                 let cnyInputVndDefault = ( vndInputDefault - parseInt(service_fee) ) / ( parseInt(data_rate) + parseInt(data_payment_fee) );
                 $('#cny_input2').val(parseFloat(cnyInputVndDefault).toFixed(2));
@@ -222,7 +228,7 @@ jQuery(function($) {
 
             // excute when keydown
             $("#cny_input1").keydown(delay(function (e) {
-                let cnyInput = parseInt(this.value);
+                let cnyInput = parseFloat(this.value.replace(/,/g, ''));
                 if( !isNaN(cnyInput) && cnyInput > 0 ){
                     let payment_fee = data_payment_fee * cnyInput;
                     let vndInput = cnyInput * parseInt(data_rate) + parseInt(service_fee) + parseInt(payment_fee);
@@ -239,7 +245,7 @@ jQuery(function($) {
             }, 200));
 
             $("#vnd_input2").keydown(delay(function (e) {
-                let vndInput = parseInt(this.value);
+                let vndInput = parseFloat(this.value.replace(/,/g, ''));
                 if( !isNaN(vndInput) && vndInput > 0 ){
                     let cnyInput = ( vndInput - parseInt(service_fee) ) / ( parseInt(data_rate) + parseInt(data_payment_fee) );
                     $('#cny_input2').val(parseFloat(cnyInput).toFixed(2));
@@ -259,8 +265,8 @@ jQuery(function($) {
             $('#money_exchange').html(formatNumber(data_rate));
 
             // excute when input has data
-            let cnyInputDefault = $("#cny_input1").val();
-            if( cnyInputDefault != '' ) {
+            let cnyInputDefault = parseFloat($("#cny_input1").val().replace(/,/g, ''));
+            if( cnyInputDefault != '' && !isNaN(cnyInputDefault) ) {
                 view_result.show();
                 let vndInputCnyDefault = cnyInputDefault * parseInt(data_rate) + parseInt(service_fee);
                 $('#vnd_input1').val(formatNumber(vndInputCnyDefault));
@@ -268,9 +274,8 @@ jQuery(function($) {
                 $('#number_receive').html(formatNumber(vndInputCnyDefault) + ' <sup>đ</sup>');
             }
 
-            let vndInputDefault = $("#vnd_input2").val();
-            if( vndInputDefault != '' ) {
-                console.log('vnd input', vndInputDefault);
+            let vndInputDefault = parseFloat($("#vnd_input2").val().replace(/,/g, ''));
+            if( vndInputDefault != '' && !isNaN(vndInputDefault) ) {
                 view_result.show();
                 let cnyInputVndDefault = ( vndInputDefault - parseInt(service_fee) ) / parseInt(data_rate);
                 $('#cny_input2').val(parseFloat(cnyInputVndDefault).toFixed(2));
@@ -280,7 +285,7 @@ jQuery(function($) {
 
             // excute when keydown
             $("#cny_input1").keydown(delay(function (e) {
-                let cnyInput = parseInt(this.value);
+                let cnyInput = parseFloat(this.value.replace(/,/g, ''));
                 if( !isNaN(cnyInput) && cnyInput > 0 ){
                     let vndInput = cnyInput * parseInt(data_rate) + parseInt(service_fee);
                     $('#vnd_input1').val(formatNumber(vndInput));
@@ -296,7 +301,7 @@ jQuery(function($) {
             }, 200));
 
             $("#vnd_input2").keydown(delay(function (e) {
-                let vndInput = parseInt(this.value);
+                let vndInput = parseFloat(this.value.replace(/,/g, ''));
                 if( !isNaN(vndInput) && vndInput > 0 ){
                     let cnyInput = ( vndInput - parseInt(service_fee) ) / parseInt(data_rate);
                     $('#cny_input2').val(parseFloat(cnyInput).toFixed(2));
